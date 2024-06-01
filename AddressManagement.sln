@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressManagement.Blazor", "AddressManagement.Blazor\AddressManagement.Blazor\AddressManagement.Blazor.csproj", "{6FEE102B-6344-4EBB-BC98-6058DDCE16B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddressManagement.Blazor", "AddressManagement.Blazor\AddressManagement.Blazor\AddressManagement.Blazor.csproj", "{6FEE102B-6344-4EBB-BC98-6058DDCE16B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressManagement.Blazor.Client", "AddressManagement.Blazor\AddressManagement.Blazor.Client\AddressManagement.Blazor.Client.csproj", "{492EB9B9-6726-450D-8C1D-2A1B4F897953}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddressManagement.Blazor.Client", "AddressManagement.Blazor\AddressManagement.Blazor.Client\AddressManagement.Blazor.Client.csproj", "{492EB9B9-6726-450D-8C1D-2A1B4F897953}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressManagement.ClassLibrary", "AddressManagement.ClassLibrary\AddressManagement.ClassLibrary.csproj", "{02637DB2-999E-45A1-BD05-3E751EB0F480}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{492EB9B9-6726-450D-8C1D-2A1B4F897953}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{492EB9B9-6726-450D-8C1D-2A1B4F897953}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{492EB9B9-6726-450D-8C1D-2A1B4F897953}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02637DB2-999E-45A1-BD05-3E751EB0F480}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02637DB2-999E-45A1-BD05-3E751EB0F480}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02637DB2-999E-45A1-BD05-3E751EB0F480}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02637DB2-999E-45A1-BD05-3E751EB0F480}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

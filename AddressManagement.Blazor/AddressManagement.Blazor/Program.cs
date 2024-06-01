@@ -1,5 +1,5 @@
-using AddressManagement.Blazor.Client.Pages;
 using AddressManagement.Blazor.Components;
+using AddressManagement.Blazor.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
+builder.Services
+    .AddPresentation("test");
 
 var app = builder.Build();
 
