@@ -9,8 +9,8 @@
   <ItemGroup>
     <ProjectReference Include="..\..\AddressManagement.ClassLibrary\AddressManagement.ClassLibrary.csproj" />
     <ProjectReference Include="..\AddressManagement.Blazor.Client\AddressManagement.Blazor.Client.csproj" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.5" />
-	<PackageReference Include="Microsoft.Extensions.Http.Polly" Version="8.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.6" />
+	<PackageReference Include="Microsoft.Extensions.Http.Polly" Version="8.0.6" />
   </ItemGroup>
 
 </Project>
