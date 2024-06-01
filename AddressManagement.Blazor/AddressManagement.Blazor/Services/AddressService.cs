@@ -15,7 +15,7 @@ namespace AddressManagement.Blazor.Services
         {
             _httpClient = httpClient;
             _configuration = configuration;
-            _httpClient.BaseAddress = new Uri(_configuration["AddressApiUrl"]);
+            _httpClient.BaseAddress = new Uri("https://localhost:5001/");
             _httpClient.DefaultRequestHeaders.Clear();
             _httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
         }

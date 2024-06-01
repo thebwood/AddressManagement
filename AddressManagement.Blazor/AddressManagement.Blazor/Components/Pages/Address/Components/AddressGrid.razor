@@ -1,0 +1,23 @@
+﻿@inherits CommonBase
+
+<table>
+    <tr>
+        <th>Street 1</th>
+        <th>Street 2</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zip</th>
+    </tr>
+
+    @foreach (var addressItem in _addresses)
+    {
+        <tr>
+            <td>@addressItem.StreetAddress1</td>
+            <td>@addressItem.StreetAddress2</td>
+            <td>@addressItem.City</td>
+            <td>@addressItem.State</td>
+            <td>@addressItem.PostalCode</td>
+        </tr>
+    }
+</table>
+}
