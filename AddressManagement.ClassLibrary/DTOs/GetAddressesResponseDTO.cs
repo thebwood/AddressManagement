@@ -9,7 +9,7 @@ namespace AddressManagement.ClassLibrary.DTOs
 {
     public class GetAddressesResponseDTO
     {
-        public List<AddressViewModel> AddressList { get; set; }
+        public List<AddressDTO> AddressList { get; set; }
 
     }
 }

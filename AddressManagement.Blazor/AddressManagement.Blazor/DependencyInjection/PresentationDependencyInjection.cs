@@ -16,11 +16,10 @@ namespace AddressManagement.Blazor.DependencyInjection
             AsyncRetryPolicy<HttpResponseMessage> retryPolicy = HttpPolicyExtensions
                 .HandleTransientHttpError()
                 .WaitAndRetryAsync(3, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)));
+
             services.AddHttpClient<IAddressService, AddressService>()
                 .AddPolicyHandler(retryPolicy);
 
-            // Add the following line to add the retryPolicy variable to the services collection
-            services.AddSingleton(retryPolicy);
 
             services.AddScoped<AddressServiceManager>();
             return services;

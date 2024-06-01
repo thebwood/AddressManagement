@@ -8,7 +8,7 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
 builder.Services
-    .AddPresentation("test");
+    .AddPresentation("https://localhost:5001/");
 
 var app = builder.Build();
 

@@ -13,14 +13,16 @@ namespace AddressManagement.Blazor.Components.Pages.Address.Components
 
         public AddressGrid()
         {
+            _addresses = new();
         }
 
 
         protected override void OnInitialized()
         {
             AddressServiceManager.AddressesLoaded += AddressesLoaded;
-            AddressServiceManager.GetAddresses();
         }
+
+
         public void Dispose()
         {
             AddressServiceManager.AddressesLoaded -= AddressesLoaded;
@@ -30,6 +32,7 @@ namespace AddressManagement.Blazor.Components.Pages.Address.Components
         private void AddressesLoaded(List<AddressViewModel> list)
         {
             _addresses = list;
+            StateHasChanged();
         }
 
     }

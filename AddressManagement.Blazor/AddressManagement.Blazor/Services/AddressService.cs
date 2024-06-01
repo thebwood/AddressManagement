@@ -2,6 +2,7 @@
 using AddressManagement.ClassLibrary.Classes;
 using AddressManagement.ClassLibrary.DTOs;
 using Microsoft.Extensions.Configuration;
+using System.Net.Http;
 
 namespace AddressManagement.Blazor.Services
 {
@@ -34,9 +35,9 @@ namespace AddressManagement.Blazor.Services
             throw new NotImplementedException();
         }
 
-        public Task<GetAddressesResponseDTO> GetAddresses()
+        public async Task<GetAddressesResponseDTO> GetAddresses()
         {
-            throw new NotImplementedException();
+            return await _httpClient.GetFromJsonAsync<GetAddressesResponseDTO>("api/Addresses");
         }
 
         public Task<Result> UpdateAddress(UpdateAddressRequestDTO addressDTO)

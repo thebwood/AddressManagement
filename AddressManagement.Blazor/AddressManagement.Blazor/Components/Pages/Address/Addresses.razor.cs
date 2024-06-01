@@ -1,16 +1,19 @@
 ﻿using AddressManagement.Blazor.BaseClasses;
 using AddressManagement.Blazor.ServiceManagers;
+using Microsoft.AspNetCore.Components;
 
 namespace AddressManagement.Blazor.Components.Pages.Address
 {
     public partial class Addresses : CommonBase
     {
-        public AddressServiceManager _addressServiceManager { get; set; }
+        [Inject]
 
-        public Addresses(AddressServiceManager addressServiceManager) 
-        { 
-            _addressServiceManager = addressServiceManager;
+        public AddressServiceManager _addressServiceManager { get; set; }
+        protected override async void OnInitialized()
+        {
+            await _addressServiceManager.GetAddresses();
         }
+
 
     }
 }
