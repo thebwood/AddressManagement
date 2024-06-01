@@ -11,11 +11,6 @@ namespace AddressManagement.Blazor.Components.Pages.Address.Components
         [Parameter]
         public AddressServiceManager AddressServiceManager { get; set; }
 
-        public AddressGrid()
-        {
-            _addresses = new();
-        }
-
 
         protected override void OnInitialized()
         {
@@ -32,7 +27,7 @@ namespace AddressManagement.Blazor.Components.Pages.Address.Components
         private void AddressesLoaded(List<AddressViewModel> list)
         {
             _addresses = list;
-            StateHasChanged();
+            this.StateHasChanged();
         }
 
     }

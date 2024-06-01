@@ -1,6 +1,12 @@
 ﻿@page "/addresses"
 @inherits CommonBase
-<h3>addresses</h3>
+
+@attribute [StreamRendering]
+
+<PageTitle>Addresses</PageTitle>
+
+
+<h1>Addresses</h1>
 
 
 <AddressGrid AddressServiceManager="_addressServiceManager"></AddressGrid>

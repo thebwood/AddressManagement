@@ -11,7 +11,6 @@ namespace AddressManagement.Blazor.DependencyInjection
     {
         public static IServiceCollection AddPresentation(this IServiceCollection services, string baseAddress)
         {
-            services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(baseAddress) });
 
             AsyncRetryPolicy<HttpResponseMessage> retryPolicy = HttpPolicyExtensions
                 .HandleTransientHttpError()
