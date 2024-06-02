@@ -29,11 +29,7 @@ namespace AddressManagement.Blazor.Services
         {
             throw new NotImplementedException();
         }
-
-        public Task<GetAddressResponseDTO> GetAddress(Guid id)
-        {
-            throw new NotImplementedException();
-        }
+        public async Task<GetAddressResponseDTO> GetAddress(Guid id) => await _httpClient.GetFromJsonAsync<GetAddressResponseDTO>($"api/addresses/{id}");
 
         public async Task<GetAddressesResponseDTO> GetAddresses()
         {

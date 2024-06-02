@@ -1,4 +1,5 @@
 ﻿using AddressManagement.Blazor.Services.Interfaces;
+using AddressManagement.ClassLibrary.Classes;
 using AddressManagement.ClassLibrary.DTOs;
 using AddressManagement.ClassLibrary.ViewModels;
 
@@ -35,6 +36,39 @@ namespace AddressManagement.Blazor.ServiceManagers
             AddressLoaded?.Invoke(response.AddressDetail);
         }
 
+
+        public async Task CreateAddress(AddressViewModel address)
+        {
+            AddAddressRequestDTO request = new AddAddressRequestDTO
+            {
+                Address = new AddressDTO
+                {
+                    StreetAddress = address.StreetAddress,
+                    StreetAddress2 = address.StreetAddress2,
+                    City = address.City,
+                    State = address.State,
+                    PostalCode = address.PostalCode
+                }
+            };
+            Result result = await _addressService.AddAddress(request);
+        }
+
+        public async Task UpdateAddress(AddressViewModel address)
+        {
+            UpdateAddressRequestDTO request = new UpdateAddressRequestDTO
+            {
+                Address = new AddressDTO
+                {
+                    Id = address.Id,
+                    StreetAddress = address.StreetAddress,
+                    StreetAddress2 = address.StreetAddress2,
+                    City = address.City,
+                    State = address.State,
+                    PostalCode = address.PostalCode
+                }
+            };
+            Result result = await _addressService.UpdateAddress(request);
+        }
 
         public Action<List<AddressViewModel>>? AddressesLoaded { get; set; }
 

@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddressManagement.Blazor", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddressManagement.Blazor.Client", "AddressManagement.Blazor\AddressManagement.Blazor.Client\AddressManagement.Blazor.Client.csproj", "{492EB9B9-6726-450D-8C1D-2A1B4F897953}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressManagement.ClassLibrary", "AddressManagement.ClassLibrary\AddressManagement.ClassLibrary.csproj", "{02637DB2-999E-45A1-BD05-3E751EB0F480}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddressManagement.ClassLibrary", "AddressManagement.ClassLibrary\AddressManagement.ClassLibrary.csproj", "{02637DB2-999E-45A1-BD05-3E751EB0F480}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
