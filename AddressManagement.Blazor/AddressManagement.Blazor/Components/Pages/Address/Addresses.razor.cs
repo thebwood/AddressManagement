@@ -7,13 +7,11 @@ namespace AddressManagement.Blazor.Components.Pages.Address
     public partial class Addresses : CommonBase
     {
         [Inject]
+        public AddressServiceManager AddressServiceManager { get; set; }
 
-        public AddressServiceManager _addressServiceManager { get; set; }
-        protected override async void OnInitialized()
+        protected override async Task OnInitializedAsync()
         {
-            await _addressServiceManager.GetAddresses();
+            await AddressServiceManager.GetAddresses();
         }
-
-
     }
 }
