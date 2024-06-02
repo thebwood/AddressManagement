@@ -31,7 +31,6 @@ namespace AddressManagement.Blazor.Components.Pages.Address.Components
         private void OnAddressLoaded(AddressViewModel address)
         {
             _address = address;
-            StateHasChanged();
         }
 
 

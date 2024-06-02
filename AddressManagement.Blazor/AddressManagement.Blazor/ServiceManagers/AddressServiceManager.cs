@@ -70,6 +70,13 @@ namespace AddressManagement.Blazor.ServiceManagers
             Result result = await _addressService.UpdateAddress(request);
         }
 
+        public async Task GetNewAddress()
+        {
+            AddressViewModel address = new AddressViewModel();
+            AddressLoaded?.Invoke(address);
+
+        }
+
         public Action<List<AddressViewModel>>? AddressesLoaded { get; set; }
 
         public Action<AddressViewModel>? AddressLoaded { get; set; }

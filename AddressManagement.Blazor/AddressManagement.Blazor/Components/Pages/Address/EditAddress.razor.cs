@@ -9,18 +9,27 @@ namespace AddressManagement.Blazor.Components.Pages.Address
     {
         [Inject]
         public AddressServiceManager AddressServiceManager { get; set; }
+
+        [Parameter]
+        public Guid AddressId { get; set; }
+
+
         protected override async Task OnInitializedAsync()
         {
-            await AddressServiceManager.GetAddress();
+            await AddressServiceManager.GetAddress(AddressId);
         }
-        private void SaveAddress(AddressViewModel address)
+
+
+
+        private async Task SaveAddress(AddressViewModel address)
         {
-            AddressServiceManager.SaveAddress(address);
+            await AddressServiceManager.UpdateAddress(address);
         }
 
         private void CancelSaveAddress()
         {
             NavigationManager.NavigateTo("/addresses");
         }
+
     }
 }
