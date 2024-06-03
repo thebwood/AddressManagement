@@ -1,8 +1,5 @@
 ﻿@inherits CommonBase
-
-@page "/address/create"
-
+@page "/addresses/create"
+@rendermode @(new InteractiveServerRenderMode(prerender: false))
 @attribute [StreamRendering]
-
-
 <AddressDetail AddressServiceManager="AddressServiceManager" OnSaveAddress="SaveAddress" OnCancelSaveAddress="CancelSaveAddress" />

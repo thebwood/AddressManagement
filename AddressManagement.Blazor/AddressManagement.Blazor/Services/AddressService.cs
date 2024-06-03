@@ -52,10 +52,10 @@ namespace AddressManagement.Blazor.Services
         {
             Result result = new();
 
-            var json = JsonSerializer.Serialize(addressDTO);
+            string? json = JsonSerializer.Serialize(addressDTO);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            using HttpResponseMessage? httpResponseMessage = await _httpClient.PutAsync($"addresses/{addressDTO.Address.Id}", content);
+            using HttpResponseMessage? httpResponseMessage = await _httpClient.PutAsync($"api/addresses/{addressDTO.Address.Id}", content);
             result.StatusCode = httpResponseMessage.StatusCode;
             result.Message = json;
 
