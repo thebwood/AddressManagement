@@ -33,7 +33,16 @@ namespace AddressManagement.Blazor.ServiceManagers
         public async Task GetAddress(Guid id)
         {
             GetAddressResponseDTO response = await _addressService.GetAddress(id);
-            AddressLoaded?.Invoke(response.AddressDetail);
+            var address = new AddressViewModel
+            {
+                Id = response.Address.Id,
+                StreetAddress = response.Address.StreetAddress,
+                StreetAddress2 = response.Address.StreetAddress2,
+                City = response.Address.City,
+                State = response.Address.State,
+                PostalCode = response.Address.PostalCode
+            };
+            AddressLoaded?.Invoke(address);
         }
 
 

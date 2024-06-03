@@ -4,7 +4,7 @@ namespace AddressManagement.ClassLibrary.DTOs
 {
     public class GetAddressResponseDTO
     {
-        public AddressViewModel AddressDetail { get; set; }
+        public AddressDTO Address { get; set; }
 
     }
 }
