@@ -7,7 +7,7 @@ using System.Net;
 
 namespace AddressManagement.Blazor.Components.Pages.Address
 {
-1    public partial class CreateAddress : CommonBase
+    public partial class CreateAddress : CommonBase
     {
         [Inject]
         public AddressServiceManager AddressServiceManager { get; set; }
@@ -18,9 +18,9 @@ namespace AddressManagement.Blazor.Components.Pages.Address
             await AddressServiceManager.GetNewAddress();
         }
 
-        private async Task SaveAddress(AddressViewModel address)
+        private void SaveAddress(AddressViewModel address)
         {
-            await AddressServiceManager.UpdateAddress(address);
+            AddressServiceManager.UpdateAddress(address);
         }
 
         private void CancelSaveAddress()

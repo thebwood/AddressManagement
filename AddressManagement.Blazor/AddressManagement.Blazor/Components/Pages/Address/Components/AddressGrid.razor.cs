@@ -26,15 +26,14 @@ namespace AddressManagement.Blazor.Components.Pages.Address.Components
             StateHasChanged();
         }
 
-
-
-        public void EditAddress(Guid id)
+        private void EditAddress(Guid id)
         {
             NavigationManager.NavigateTo($"/addresses/{id}");
         }
 
 
-        public void DeleteAddress(Guid id)
+
+        private void DeleteAddress(Guid id)
         {
 
 

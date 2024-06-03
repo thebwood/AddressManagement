@@ -21,9 +21,9 @@ namespace AddressManagement.Blazor.Components.Pages.Address
 
 
 
-        private async Task SaveAddress(AddressViewModel address)
+        private void SaveAddress(AddressViewModel address)
         {
-            await AddressServiceManager.UpdateAddress(address);
+            AddressServiceManager.UpdateAddress(address);
         }
 
         private void CancelSaveAddress()
