@@ -16,8 +16,7 @@ namespace AddressManagement.Blazor.DependencyInjection
                 .HandleTransientHttpError()
                 .WaitAndRetryAsync(3, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)));
 
-            services.AddHttpClient<IAddressService, AddressService>()
-                .AddPolicyHandler(retryPolicy);
+            services.AddHttpClient<IAddressService, AddressService>();
 
 
             services.AddScoped<AddressServiceManager>();

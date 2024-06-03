@@ -1,8 +1,9 @@
 ﻿@inherits CommonBase
-
 @page "/addresses/{AddressId:guid}"
 @rendermode @(new InteractiveServerRenderMode(prerender: false))
 @attribute [StreamRendering]
+
+
 <h3>EditAddress</h3>
 
 <AddressDetail AddressServiceManager="AddressServiceManager" OnSaveAddress="SaveAddress" OnCancelSaveAddress="CancelSaveAddress"></AddressDetail>

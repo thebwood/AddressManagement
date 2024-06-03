@@ -7,6 +7,7 @@ namespace AddressManagement.Blazor.Components.Pages.Address.Components
 {
     public partial class AddressDetail : CommonBase, IDisposable
     {
+        [SupplyParameterFromForm]
         private AddressViewModel _address { get; set; } = new();
         [Parameter]
         public AddressServiceManager AddressServiceManager { get; set; }

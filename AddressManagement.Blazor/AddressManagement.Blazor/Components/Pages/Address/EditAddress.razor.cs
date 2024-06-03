@@ -19,8 +19,6 @@ namespace AddressManagement.Blazor.Components.Pages.Address
             await AddressServiceManager.GetAddress(AddressId);
         }
 
-
-
         private void SaveAddress(AddressViewModel address)
         {
             AddressServiceManager.UpdateAddress(address);
