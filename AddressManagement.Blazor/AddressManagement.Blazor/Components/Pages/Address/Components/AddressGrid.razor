@@ -1,28 +1,30 @@
 ﻿@inherits CommonBase
-@rendermode @(new InteractiveServerRenderMode(prerender: false))
-@attribute [StreamRendering]
+@rendermode @(new InteractiveServerRenderMode(prerender: true))
 
 <table class="table">
     <thead>
+        <th></th>
         <th>Street 1</th>
         <th>Street 2</th>
         <th>City</th>
         <th>State</th>
         <th>Zip</th>
+        <th></th>
     </thead>
 
     @foreach (var address in _addresses)
     {
         <tr>
+            <td>
+                <button class="btn btn-primary" type="button" @onclick="() => EditAddress(address.Id.Value)">Edit</button>
+            </td>
             <td>@address.StreetAddress</td>
             <td>@address.StreetAddress2</td>
             <td>@address.City</td>
             <td>@address.State</td>
             <td>@address.PostalCode</td>
             <td>
-
-                <button class="btn btn-primary" @onclick="() => EditAddress(address.Id.Value)">Edit</button>
-                <button class="btn btn-danger" @onclick="() => DeleteAddress(address.Id.Value)">Delete</button>
+                <button class="btn btn-danger" type="button" @onclick="() => DeleteAddress(address.Id.Value)">Delete</button>
             </td>
 
         </tr>

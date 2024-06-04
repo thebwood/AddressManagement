@@ -8,17 +8,13 @@ namespace AddressManagement.ClassLibrary.Classes
 {
     public class Error
     {
-        private string _code;
-        private string _name;
-        public Error(string code, string name)
-
+        public Error() { }
+        public Error(string message)
         {
-            _code = code;
-            _name = name;
+            Message = message;
         }
-        public static Error None = new(string.Empty, string.Empty);
 
-        public static Error NullValue = new("Error.NullValue", "Null value was provided");
-
+        public string Message { get; set; }
+        public string ErrorType { get; set; }
     }
 }

@@ -11,11 +11,11 @@ namespace AddressManagement.ClassLibrary.Classes
 
     public class Result<TValue> : Result
     {
-        private readonly TValue? _value;
+        public TValue? Value { get => _value; set => _value = value; }
+        private TValue? _value;
 
-        protected internal Result(TValue? value, bool isSuccess, Error error)
+        public Result()
         {
-            _value = value;
         }
     }
 }
