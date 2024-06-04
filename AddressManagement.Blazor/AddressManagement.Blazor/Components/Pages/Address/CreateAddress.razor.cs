@@ -1,9 +1,7 @@
 ﻿using AddressManagement.Blazor.BaseClasses;
-using AddressManagement.Blazor.Components.Pages.Address.Components;
 using AddressManagement.Blazor.ServiceManagers;
 using AddressManagement.ClassLibrary.ViewModels;
 using Microsoft.AspNetCore.Components;
-using System.Net;
 
 namespace AddressManagement.Blazor.Components.Pages.Address
 {
@@ -20,7 +18,7 @@ namespace AddressManagement.Blazor.Components.Pages.Address
 
         private void SaveAddress(AddressViewModel address)
         {
-            AddressServiceManager.UpdateAddress(address);
+            AddressServiceManager.CreateAddress(address);
         }
 
         private void CancelSaveAddress()

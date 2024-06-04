@@ -7,26 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Components\Pages\Address\CreateAddress.razor" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\AddressManagement.ClassLibrary\AddressManagement.ClassLibrary.csproj" />
     <ProjectReference Include="..\AddressManagement.Blazor.Client\AddressManagement.Blazor.Client.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.6" />
 	<PackageReference Include="Microsoft.Extensions.Http.Polly" Version="8.0.6" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Components\Pages\Address\CreateAddress.razor" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="Components\Pages\Address\CreateAddress.razor" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Components\Pages\Address\CreateAddress.razor" />
   </ItemGroup>
 
 </Project>
