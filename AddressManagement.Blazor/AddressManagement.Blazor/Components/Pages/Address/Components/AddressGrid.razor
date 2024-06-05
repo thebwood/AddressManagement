@@ -1,33 +1,49 @@
 ﻿@inherits CommonBase
-@rendermode @(new InteractiveServerRenderMode(prerender: true))
+@rendermode @(new InteractiveServerRenderMode(prerender: false))
+@attribute [StreamRendering]
 
-<table class="table">
-    <thead>
-        <th></th>
-        <th>Street 1</th>
-        <th>Street 2</th>
-        <th>City</th>
-        <th>State</th>
-        <th>Zip</th>
-        <th></th>
-    </thead>
 
-    @foreach (var address in _addresses)
-    {
-        <tr>
-            <td>
-                <button class="btn btn-primary" type="button" @onclick="() => EditAddress(address.Id.Value)">Edit</button>
-            </td>
-            <td>@address.StreetAddress</td>
-            <td>@address.StreetAddress2</td>
-            <td>@address.City</td>
-            <td>@address.State</td>
-            <td>@address.PostalCode</td>
-            <td>
-                <button class="btn btn-danger" type="button" @onclick="() => DeleteAddress(address.Id.Value)">Delete</button>
-            </td>
-
-        </tr>
-    }
-</table>
-
+<div class="row">
+    <div class="col-12 text-end">
+        <a class="btn btn-primary" href="/addresses/create">Create Address</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        @if(_addresses.Count > 0)
+        {
+            <table class="table">
+                <thead>
+                    <th></th>
+                    <th>Street 1</th>
+                    <th>Street 2</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Zip</th>
+                    <th></th>
+                </thead>
+        
+                @foreach (var address in _addresses)
+                {
+                    <tr>
+                        <td>
+                            <button class="btn btn-primary" type="button" @onclick="() => EditAddress(address.Id.Value)">Edit</button>
+                        </td>
+                        <td>@address.StreetAddress</td>
+                        <td>@address.StreetAddress2</td>
+                        <td>@address.City</td>
+                        <td>@address.State</td>
+                        <td>@address.PostalCode</td>
+                        <td>
+                            <button class="btn btn-danger" type="button" @onclick="() => DeleteAddress(address.Id.Value)">Delete</button>
+                        </td>
+                    </tr>
+                }
+            </table>
+        }
+        else
+        {
+            <p>No addresses found</p>
+        }
+    </div>
+</div>
